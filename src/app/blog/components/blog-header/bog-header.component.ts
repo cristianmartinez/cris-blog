@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-bog-header',
+  selector: 'app-blog-header',
   templateUrl: './bog-header.component.html',
-  styleUrls: ['./bog-header.component.scss']
 })
 export class BogHeaderComponent implements OnInit {
 
@@ -11,5 +10,4 @@ export class BogHeaderComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
 }
