@@ -13,6 +13,10 @@ export class PostItemComponent {
   // Local component state
   isPostActive = false;
 
+  get postLabel(): string {
+    return this.isPostActive ? `ID: ${this.postData.id}` : `UID: ${this.postData.userId}`;
+  }
+
   /**
    * Handle post activation when the host element is clicked
    */

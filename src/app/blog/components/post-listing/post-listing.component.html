@@ -1,6 +1,9 @@
-<div class="post-listing__container">
-  <app-post-item
-    *ngFor="let post of posts$ | async; trackBy: trackByPost"
-    [postData]="post">
-  </app-post-item>
+<div class="container mx-auto px-4" style="max-width: 1024px">
+  <div class="post-listing__container flex flex-row flex-wrap -mx-4">
+    <app-post-item
+      class="w-full p-4 lg:w-1/2 flex"
+      *ngFor="let post of posts$ | async; trackBy: trackByPost"
+      [postData]="post">
+    </app-post-item>
+  </div>
 </div>
