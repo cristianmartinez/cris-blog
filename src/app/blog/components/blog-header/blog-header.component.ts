@@ -2,9 +2,9 @@ import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-blog-header',
-  templateUrl: './bog-header.component.html',
+  templateUrl: './blog-header.component.html',
 })
-export class BogHeaderComponent implements OnInit {
+export class BlogHeaderComponent implements OnInit {
 
   constructor() { }
 

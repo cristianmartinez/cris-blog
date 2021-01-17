@@ -3,11 +3,11 @@ import { CommonModule } from '@angular/common';
 import { PostListingComponent } from './components/post-listing/post-listing.component';
 import { PostItemComponent } from './components/post-item/post-item.component';
 import {HttpClientModule} from '@angular/common/http';
-import { BogHeaderComponent } from './components/blog-header/bog-header.component';
+import { BlogHeaderComponent } from './components/blog-header/blog-header.component';
 import {BlogLogoComponent} from './components/blog-logo/blog-logo.component';
 
 @NgModule({
-  declarations: [PostListingComponent, PostItemComponent, BogHeaderComponent, BlogLogoComponent],
+  declarations: [PostListingComponent, PostItemComponent, BlogHeaderComponent, BlogLogoComponent],
   exports: [
     PostListingComponent,
   ],
