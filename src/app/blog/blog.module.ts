@@ -4,17 +4,17 @@ import { PostListingComponent } from './components/post-listing/post-listing.com
 import { PostItemComponent } from './components/post-item/post-item.component';
 import {HttpClientModule} from '@angular/common/http';
 import { BogHeaderComponent } from './components/bog-header/bog-header.component';
-
+import {LogoComponent} from './components/logo/logo.component';
 
 
 @NgModule({
-  declarations: [PostListingComponent, PostItemComponent, BogHeaderComponent],
+  declarations: [PostListingComponent, PostItemComponent, BogHeaderComponent, LogoComponent],
   exports: [
-    PostListingComponent
+    PostListingComponent,
   ],
-  imports: [
-    CommonModule,
-    HttpClientModule
-  ]
+    imports: [
+        CommonModule,
+        HttpClientModule,
+    ]
 })
 export class BlogModule { }
