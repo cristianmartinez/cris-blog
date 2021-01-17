@@ -4,7 +4,6 @@ import {BlogService, Post} from '../../services/blog.service';
 @Component({
   selector: 'app-post-listing',
   templateUrl: './post-listing.component.html',
-  styleUrls: ['./post-listing.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PostListingComponent {
