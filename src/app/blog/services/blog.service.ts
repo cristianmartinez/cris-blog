@@ -18,6 +18,6 @@ export class BlogService {
   constructor(private readonly http: HttpClient) { }
 
   public getLatestPosts(): Observable<Post[]> {
-    return this.http.get<Post[]>(BlogService.API_URL);
+    return this.http.get<Post[]>(`${BlogService.API_URL}/posts`);
   }
 }

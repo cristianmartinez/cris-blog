@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
+import {ChangeDetectionStrategy, Component, HostBinding, HostListener, Input} from '@angular/core';
 import {Post} from '../../services/blog.service';
 
 @Component({
@@ -10,7 +10,14 @@ import {Post} from '../../services/blog.service';
 export class PostItemComponent {
   @Input() postData: Post;
 
+  // Local component state
   isPostActive = false;
 
-  constructor() { }
+  /**
+   * Handle post activation when the host element is clicked
+   */
+  @HostListener('click')
+  onPostClick(event: MouseEvent): void {
+    this.isPostActive = !this.isPostActive;
+  }
 }
