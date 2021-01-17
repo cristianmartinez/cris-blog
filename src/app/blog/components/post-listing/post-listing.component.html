@@ -1,10 +1,18 @@
 <app-blog-header class="mb-4 block p-4"></app-blog-header>
 <div class="container mx-auto px-4" style="max-width: 1024px">
   <div class="post-listing__container flex flex-row flex-wrap -mx-4">
-    <app-post-item
-      class="w-full p-4 lg:w-1/2 flex"
-      *ngFor="let post of posts$ | async; trackBy: trackByPost"
-      [postData]="post">
-    </app-post-item>
+    <ng-container *ngIf="isLoading$ | async; else postListingTemplate">
+      <div class="text-center p-4 w-full flex align-center justify-center">
+        <img src="/assets/preloader.svg">
+      </div>
+    </ng-container>
   </div>
 </div>
+
+<ng-template #postListingTemplate>
+  <app-post-item
+    class="w-full p-4 lg:w-1/2 flex"
+    *ngFor="let post of posts$ | async; trackBy: trackByPost"
+    [postData]="post">
+  </app-post-item>
+</ng-template>
